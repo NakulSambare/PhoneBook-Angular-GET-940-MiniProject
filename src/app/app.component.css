@@ -1,0 +1,42 @@
+.title
+{
+  align-items: center;
+  margin-top: 2%;
+}
+
+button
+{
+     margin-left: 70%;
+}
+
+.nameStyle
+{
+  font-weight: bold;
+}
+
+ul{
+   list-style-type: none;
+}
+
+.nameStyle2
+{
+  font-weight: lighter;
+}
+
+.row1
+{
+  background-color: rgb(241, 238, 233);
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 5px;
+}
+
+.deletebtn
+{
+  margin-top: 1%;
+}
+
+.modelSize
+{
+   margin-right: 80%;
+}

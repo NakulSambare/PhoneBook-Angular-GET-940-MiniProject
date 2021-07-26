@@ -1,0 +1,89 @@
+<script>
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+</script>
+<div class="title">
+  <table align="center">
+    <tr>
+      <td><img src="/assets/icons.png" alt="" height="40px" width="40px"></td>
+     <td><h1>Phone Book App</h1></td>
+    </tr>
+  </table>
+
+     <div class="row">
+       <div class="col">
+        <h1 style="margin-left: 2%;">Contacts</h1>
+       </div>
+       <div class="col" >
+        <button class="btn btn-lg btn-primary" (click)="open(mymodal)">+ Add Contact</button>
+
+<ng-template #mymodal let-modal   >
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">New Contact</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body modal-xl">
+    <form action="" name="loginForm" (ngSubmit)="addContact()" >
+
+      <input type="text"  name="Name"  [(ngModel)]= phb.name   placeholder="Enter Name">  <br><br>
+       <input type="number"  name="phoneNo" id="" [(ngModel)]= phb.phoneNumber placeholder="Enter Phone No"><br><br>
+      <input type="submit" value="submit" name="" id=" ">
+      </form>
+
+  </div>
+  <div class="modal-footer">
+
+
+    <div class="col">
+
+
+    <br>
+
+      <button type="button" class="btn btn-dark" (click)="modal.close('Save click')">Cancel</button>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+</ng-template>
+
+
+       </div>
+
+     </div>
+
+     <div class="input-group mb-3 m-3 mr-5" style="margin-right: 2%;">
+
+      <input type="text" class="form-control" placeholder="Search the contact by last name.." aria-label="Username" aria-describedby="basic-addon1" style="margin-right: 2%;">
+    </div>
+
+    <div class="row  row1" *ngFor="let ph of phoneArray">
+       <div class="col ">
+        <ul>
+          <li class="nameStyle">{{ph.name}}</li>
+          <li class="nameStyle2">{{ph.phoneNumber}}</li>
+        </ul>
+       </div>
+       <div class="col">
+        <button type="button" class="btn btn-danger deletebtn" (click)="deleteContact(ph)">Delete</button>
+       </div>
+
+
+
+    </div>
+</div>
+
